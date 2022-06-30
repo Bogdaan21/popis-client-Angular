@@ -1,0 +1,16 @@
+<p>home works!</p>
+ <ul>
+    <li *ngFor = 'let c of concept; let i = index'>
+        {{i+1}} - {{c}}
+    </li>
+ </ul>
+
+ <p *ngIf="testValue > 4">
+    We love Angular !
+ </p>
+
+ <div [ngSwitch] = "concept.length">
+    <p *ngSwitchCase="0">We have no Angular concept</p>
+    <p *ngSwitchCase="1">We have one Angular concept</p>
+    <p *ngSwitchDefault>We have many Angular concept</p>
+ </div>
