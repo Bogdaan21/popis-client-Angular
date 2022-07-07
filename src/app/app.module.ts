@@ -7,13 +7,21 @@ import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
+
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTableModule } from '@angular/material/table';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatIconModule } from '@angular/material/icon';
+import { MatSortModule } from '@angular/material/sort';
 
 import { HttpClientModule } from '@angular/common/http';
 
-import { ArtikalComponent } from './components/artikal/artikal.component'
+import { ArtikalComponent } from './components/artikal/artikal.component';
+import { ArtikalpostputComponent } from './components/artikalpostput/artikalpostput.component';
+import { ImenikComponent } from './components/imenik/imenik.component'
 
 @NgModule({
   declarations: [
@@ -21,7 +29,9 @@ import { ArtikalComponent } from './components/artikal/artikal.component'
     HomeComponent,
     HeaderComponent,
     FooterComponent,
-    ArtikalComponent
+    ArtikalComponent,
+    ArtikalpostputComponent,
+    ImenikComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +40,13 @@ import { ArtikalComponent } from './components/artikal/artikal.component'
     MatButtonModule,
     MatToolbarModule,
     MatTableModule,
-    HttpClientModule
+    HttpClientModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FormsModule,
+    MatIconModule,
+    MatSortModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

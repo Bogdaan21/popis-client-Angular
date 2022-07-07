@@ -1,0 +1,39 @@
+<table mat-table [dataSource]="imenik" matSort (matSortChange)="announceSortChange($event)"
+    class="mat-elevation-z8">
+
+  <ng-container matColumnDef="brojLokala">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by number">
+      Broj lokala
+    </th>
+    <td mat-cell *matCellDef="let element"> {{element.brojLokala}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="imePrezime">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by name">
+      Ime i Prezime
+    </th>
+    <td mat-cell *matCellDef="let element"> {{element.imePrezime}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="brojKancelarije">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by weight">
+      Broj kancelarije
+    </th>
+    <td mat-cell *matCellDef="let element"> {{element.brojKancelarije}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="organizacionaJedinica">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by symbol">
+      Organizaciona jedinica
+    </th>
+    <td mat-cell *matCellDef="let element"> {{element.organizacionaJedinica}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
+
+<!-- Copyright 2022 Google LLC. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that
+    can be found in the LICENSE file at https://angular.io/license -->

@@ -1,0 +1,58 @@
+<h1 *ngIf="!edit">Unesi novi Artikal</h1>
+<h1 *ngIf="edit">Uredi Artikal</h1>
+
+<div>
+    <mat-form-field appearance='fill'>
+        <mat-label>Vrsta</mat-label>
+        <input #vrsta_id matInput type="text" [(ngModel)] = "artikalpostput.vrsta_id"/>
+    </mat-form-field>
+</div>
+
+
+<div>
+    <mat-form-field appearance='fill'>
+        <mat-label>Model</mat-label>
+        <input #model matInput type="text" [(ngModel)] = "artikalpostput.model"/>
+    </mat-form-field>
+</div>
+
+
+<div>
+    <mat-form-field appearance='fill'>
+        <mat-label>Inventarski Broj</mat-label>
+        <input #inventarski_broj_novi matInput type="number" [(ngModel)] = "artikalpostput.inventarski_broj_novi"/>
+    </mat-form-field>
+</div>
+
+
+<div>
+    <mat-form-field appearance='fill'>
+        <mat-label>Mjesto</mat-label>
+        <input #mjesto_id matInput type="text" [(ngModel)] = "artikalpostput.mjesto_id"/>
+    </mat-form-field>
+</div>
+
+<div>
+    <mat-form-field appearance='fill'>
+        <mat-label>Cijena</mat-label>
+        <input #zaduzenje matInput type="text" [(ngModel)] = "artikalpostput.cijena_id"/>
+    </mat-form-field>
+</div>
+
+<div>
+    <mat-form-field appearance='fill'>
+        <mat-label>Knjigovodstvena evidencija</mat-label>
+        <input #zaduzenje matInput type="text" [(ngModel)] = "artikalpostput.knjigovodstvena_evidencija_id"/>
+    </mat-form-field>
+</div>
+
+<div>
+    <mat-form-field appearance='fill'>
+        <mat-label>Zadužen/a</mat-label>
+        <input #zaduzenje matInput type="text" [(ngModel)] = "artikalpostput.zaduzenje"/>
+    </mat-form-field>
+</div>
+
+<div>
+    <button mat-raised-button (click)="save()">Unesi</button>
+</div>
