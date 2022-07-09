@@ -9,7 +9,7 @@ import { ArtikalService } from 'src/app/services/artikal.service';
 })
 export class ArtikalComponent implements OnInit {
 
-  displayedColumns: string[] = [ 'Aid', 'Vrsta_id', 'Model', 'Inventarski_broj_novi', 'Cijena_id', 'Knjigovodstvena_evidenija_id', 'Mjesto_id', 'Status_id', 'Zaduzenje', 'Uredi', 'Izbrisi'];
+  displayedColumns: string[] = [ 'tip', 'Model', 'Inventarski_broj_novi', 'konto', 'sprat', 'broj_kancelarije', 'nabavna_cijena', 'sadasnja_vrijednost', 'godina_nabavke', 'popisano', 'otpisano' , 'nepopisano' , 'napomena', 'Zaduzenje', 'Uredi', 'Izbrisi'];
   // inventarski_broj_stari uklonjen. Dodati ga u displayedColumns i u html-u koji sam zakometarisao. U interface ostao.
   // status_id nije povezan ni sa cim trenutno jer ne znam da li u ovoj komponenti smiju da se povezuju samo atribudi koji su za nju, i strani kljucevi a status je strani kljuc od knjigovodst.
   artikal: Artikal[] = [];

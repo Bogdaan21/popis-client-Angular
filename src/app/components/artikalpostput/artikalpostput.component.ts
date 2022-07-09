@@ -10,7 +10,7 @@ import { ArtikalService } from 'src/app/services/artikal.service';
 })
 export class ArtikalpostputComponent implements OnInit, AfterViewInit {
 
-  artikalpostput: Artikal = {aid: null, model: null, zaduzenje: null, inventarski_broj_novi: null, inventarski_broj_stari: null, cijena_id: null, knjigovodstvena_evidencija_id: null, mjesto_id: null, vrsta_id: null};
+  artikalpostput: Artikal = {cijena_id: null, knjigovodstvena_evidencija_id: null, mjesto_id: null, vrsta_id: null, aid: null, model: null, zaduzenje: null, inventarski_broj_novi: null, inventarski_broj_stari: null, nabavna_cijena: null, sadasnja_vrijednost: null, godina_nabavke: null, sprat: null, broj_kancelarije: null, napomena: null, tip: null, konto: null, popisano: null, otpisano: null , nepopisano: null};
 
   edit: boolean = false;
 

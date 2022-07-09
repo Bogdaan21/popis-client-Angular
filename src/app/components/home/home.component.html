@@ -1,16 +1,15 @@
-<p>home works!</p>
- <ul>
-    <li *ngFor = 'let c of concept; let i = index'>
-        {{i+1}} - {{c}}
-    </li>
- </ul>
-
- <p *ngIf="testValue > 4">
-    We love Angular !
- </p>
-
- <div [ngSwitch] = "concept.length">
-    <p *ngSwitchCase="0">We have no Angular concept</p>
-    <p *ngSwitchCase="1">We have one Angular concept</p>
-    <p *ngSwitchDefault>We have many Angular concept</p>
- </div>
+<mat-card class="example-card">
+   <mat-card-header>
+     <div mat-card-avatar class="example-header-image"></div>
+     <mat-card-title>Shiba Inu</mat-card-title>
+     <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+   </mat-card-header>
+   <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+   <mat-card-content>
+     <p>
+       The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+       A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+       bred for hunting.
+     </p>
+   </mat-card-content>
+ </mat-card>

@@ -4,11 +4,24 @@ import { MatSort, Sort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { Imenik } from 'src/app/interface/imenik-interface';
 
+
 const imenikdata: Imenik[] = [
-  {brojLokala: 200, imePrezime: 'Hydrogen', brojKancelarije: 400, organizacionaJedinica: 'Kabinet ministra'},
+  {brojLokala: 200, imePrezime: 'Sekratarica kabineta', brojKancelarije: 400, organizacionaJedinica: 'Kabinet ministra'},
   {brojLokala: 201, imePrezime: 'Ana Novaković Đurović', brojKancelarije: 401, organizacionaJedinica: 'Kabinet ministra'},
   {brojLokala: 202, imePrezime: 'Radnima Lainović', brojKancelarije: 404, organizacionaJedinica: 'Direktorat za razvoj stanovanja i legalizaciju'},
-  {brojLokala: 203, imePrezime: '', brojKancelarije: 0, organizacionaJedinica: ''},
+  {brojLokala: 203, imePrezime: '', brojKancelarije: null, organizacionaJedinica: ''},
+  {brojLokala: 204, imePrezime: 'Anja Jovanović', brojKancelarije: 313, organizacionaJedinica: 'Direkcija za upravljanje otpadom i komunalne usluge'},
+  {brojLokala: 205, imePrezime: 'Radovan Bojović', brojKancelarije: 403, organizacionaJedinica: 'Kabinet ministra'},
+  {brojLokala: 200, imePrezime: 'Sekratarica kabineta', brojKancelarije: 400, organizacionaJedinica: 'Kabinet ministra'},
+  {brojLokala: 201, imePrezime: 'Ana Novaković Đurović', brojKancelarije: 401, organizacionaJedinica: 'Kabinet ministra'},
+  {brojLokala: 202, imePrezime: 'Radnima Lainović', brojKancelarije: 404, organizacionaJedinica: 'Direktorat za razvoj stanovanja i legalizaciju'},
+  {brojLokala: 203, imePrezime: '', brojKancelarije: null, organizacionaJedinica: ''},
+  {brojLokala: 204, imePrezime: 'Anja Jovanović', brojKancelarije: 313, organizacionaJedinica: 'Direkcija za upravljanje otpadom i komunalne usluge'},
+  {brojLokala: 205, imePrezime: 'Radovan Bojović', brojKancelarije: 403, organizacionaJedinica: 'Kabinet ministra'},
+  {brojLokala: 200, imePrezime: 'Sekratarica kabineta', brojKancelarije: 400, organizacionaJedinica: 'Kabinet ministra'},
+  {brojLokala: 201, imePrezime: 'Ana Novaković Đurović', brojKancelarije: 401, organizacionaJedinica: 'Kabinet ministra'},
+  {brojLokala: 202, imePrezime: 'Radnima Lainović', brojKancelarije: 404, organizacionaJedinica: 'Direktorat za razvoj stanovanja i legalizaciju'},
+  {brojLokala: 203, imePrezime: '', brojKancelarije: null, organizacionaJedinica: ''},
   {brojLokala: 204, imePrezime: 'Anja Jovanović', brojKancelarije: 313, organizacionaJedinica: 'Direkcija za upravljanje otpadom i komunalne usluge'},
   {brojLokala: 205, imePrezime: 'Radovan Bojović', brojKancelarije: 403, organizacionaJedinica: 'Kabinet ministra'},
 ];
@@ -18,7 +31,9 @@ const imenikdata: Imenik[] = [
   templateUrl: './imenik.component.html',
   styleUrls: ['./imenik.component.scss']
 })
+
 export class ImenikComponent implements AfterViewInit {
+
 
   displayedColumns: string[] = ['brojLokala', 'imePrezime', 'brojKancelarije', 'organizacionaJedinica'];
   imenik = new MatTableDataSource(imenikdata);
@@ -38,5 +53,9 @@ export class ImenikComponent implements AfterViewInit {
       this._liveAnnouncer.announce('Sorting cleared');
     }
   }
+
 }
+
+
+
 

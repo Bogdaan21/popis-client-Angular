@@ -9,6 +9,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 
+
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTableModule } from '@angular/material/table';
@@ -16,12 +17,14 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSortModule } from '@angular/material/sort';
+import { MatCardModule } from '@angular/material/card';
 
 import { HttpClientModule } from '@angular/common/http';
 
 import { ArtikalComponent } from './components/artikal/artikal.component';
 import { ArtikalpostputComponent } from './components/artikalpostput/artikalpostput.component';
-import { ImenikComponent } from './components/imenik/imenik.component'
+import { ImenikComponent } from './components/imenik/imenik.component';
+
 
 @NgModule({
   declarations: [
@@ -31,7 +34,7 @@ import { ImenikComponent } from './components/imenik/imenik.component'
     FooterComponent,
     ArtikalComponent,
     ArtikalpostputComponent,
-    ImenikComponent
+    ImenikComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,6 +49,7 @@ import { ImenikComponent } from './components/imenik/imenik.component'
     FormsModule,
     MatIconModule,
     MatSortModule,
+    MatCardModule,
     
   ],
   providers: [],

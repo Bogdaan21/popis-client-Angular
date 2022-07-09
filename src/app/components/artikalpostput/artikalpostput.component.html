@@ -3,11 +3,10 @@
 
 <div>
     <mat-form-field appearance='fill'>
-        <mat-label>Vrsta</mat-label>
-        <input #vrsta_id matInput type="text" [(ngModel)] = "artikalpostput.vrsta_id"/>
+        <mat-label>Tip</mat-label>
+        <input #tip matInput type="text" [(ngModel)] = "artikalpostput.tip"/>
     </mat-form-field>
 </div>
-
 
 <div>
     <mat-form-field appearance='fill'>
@@ -16,6 +15,12 @@
     </mat-form-field>
 </div>
 
+<div>
+    <mat-form-field appearance='fill'>
+        <mat-label>Konto</mat-label>
+        <input #konto matInput type="text" [(ngModel)] = "artikalpostput.konto"/>
+    </mat-form-field>
+</div>
 
 <div>
     <mat-form-field appearance='fill'>
@@ -24,25 +29,31 @@
     </mat-form-field>
 </div>
 
-
 <div>
     <mat-form-field appearance='fill'>
-        <mat-label>Mjesto</mat-label>
-        <input #mjesto_id matInput type="text" [(ngModel)] = "artikalpostput.mjesto_id"/>
+        <mat-label>Nabavna cijena</mat-label>
+        <input #nabavna_cijena matInput type="number" [(ngModel)] = "artikalpostput.nabavna_cijena"/>
     </mat-form-field>
 </div>
 
 <div>
     <mat-form-field appearance='fill'>
-        <mat-label>Cijena</mat-label>
-        <input #zaduzenje matInput type="text" [(ngModel)] = "artikalpostput.cijena_id"/>
+        <mat-label>Godina nabavke</mat-label>
+        <input #godina_nabavke matInput type="number" [(ngModel)] = "artikalpostput.godina_nabavke"/>
     </mat-form-field>
 </div>
 
 <div>
     <mat-form-field appearance='fill'>
-        <mat-label>Knjigovodstvena evidencija</mat-label>
-        <input #zaduzenje matInput type="text" [(ngModel)] = "artikalpostput.knjigovodstvena_evidencija_id"/>
+        <mat-label>Sprat</mat-label>
+        <input #sprat matInput type="number" [(ngModel)] = "artikalpostput.sprat"/>
+    </mat-form-field>
+</div>
+
+<div>
+    <mat-form-field appearance='fill'>
+        <mat-label>Broj Kancelarije</mat-label>
+        <input #broj_kancelarije matInput type="number" [(ngModel)] = "artikalpostput.broj_kancelarije"/>
     </mat-form-field>
 </div>
 
