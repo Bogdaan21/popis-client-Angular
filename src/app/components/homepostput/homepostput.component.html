@@ -1,0 +1,38 @@
+<h1 *ngIf="!edit">Unesi novi Direktorat</h1>
+<h1 *ngIf="edit">Uredi Artikal</h1>
+
+<div>
+    <mat-form-field appearance='fill'>
+        <mat-label>direktoratid</mat-label>
+        <input #direktoratid matInput type="text" [(ngModel)] = "pocetnastranapostput.direktoratid"/>
+    </mat-form-field>
+</div>
+
+<div>
+    <mat-form-field appearance='fill'>
+        <mat-label>naziv_direktorata</mat-label>
+        <input #naziv_direktorata matInput type="text" [(ngModel)] = "pocetnastranapostput.naziv_direktorata"/>
+    </mat-form-field>
+</div>
+
+<div>
+    <mat-form-field appearance='fill'>
+        <mat-label>opis_direktorata</mat-label>
+        <input #opis_direktorata matInput type="text" [(ngModel)] = "pocetnastranapostput.opis_direktorata"/>
+    </mat-form-field>
+</div>
+
+<div>
+    <mat-form-field appearance='fill'>
+        <mat-label>slika_direktorata</mat-label>
+        <input #slika_direktorata matInput type="number" [(ngModel)] = "pocetnastranapostput.slika_direktorata"/>
+    </mat-form-field>
+</div>
+
+<div>
+    <input type="file" (change)="uploadFile($event)"/>
+</div>
+
+<div>
+    <button mat-raised-button (click)="save()">Unesi</button>
+</div>

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Direktorat } from 'src/app/interface/direktorat-interface';
+import { PocetnastranaService } from 'src/app/services/pocetnastrana.service';
 
 @Component({
   selector: 'app-home',
@@ -7,13 +9,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  concept = ['Prva', 'Druga', 'Treca']; // unesi elemente
+  direktorat: Direktorat[] = [];
 
-  testValue = 5;
+  constructor(private direktoratService: PocetnastranaService) { }
 
-  constructor() { }
-
-  ngOnInit(): void {
+  ngOnInit(): void{
+    this.fillData();
   }
 
+  deleteDiraktorat(direktoratid: number) {
+    this.direktoratService.deleteDirektorat(direktoratid).subscribe(data => {
+      if(data.affectedRows == 1) {
+        alert('Direktorat izbrisan');
+        this.fillData();
+      }
+    })
+  }
+
+  fillData(){
+    this.direktoratService.getAllDirektorat().subscribe(data => {
+      this.direktorat = data;
+  })
+}
 }

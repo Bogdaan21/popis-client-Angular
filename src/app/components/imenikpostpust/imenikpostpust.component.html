@@ -1,0 +1,35 @@
+<h1 *ngIf="!edit">Unesi novog Kontakta</h1>
+<h1 *ngIf="edit">Uredi Artikal</h1>
+
+<div>
+    <mat-form-field appearance='fill'>
+        <mat-label>ime i Prezime</mat-label>
+        <input #tip matInput type="text" [(ngModel)] = "imenikpostput.ime_prezime"/>
+    </mat-form-field>
+</div>
+
+<div>
+    <mat-form-field appearance='fill'>
+        <mat-label>Broj kancelarije</mat-label>
+        <input #model matInput type="text" [(ngModel)] = "imenikpostput.broj_kancelarije"/>
+    </mat-form-field>
+</div>
+
+<div>
+    <mat-form-field appearance='fill'>
+        <mat-label>Organizaciona jedinica</mat-label>
+        <input #konto matInput type="text" [(ngModel)] = "imenikpostput.organizaciona_jedinica"/>
+    </mat-form-field>
+</div>
+
+<div>
+    <mat-form-field appearance='fill'>
+        <mat-label>Broj lokala</mat-label>
+        <input #inventarski_broj_novi matInput type="number" [(ngModel)] = "imenikpostput.broj_lokala"/>
+    </mat-form-field>
+</div>
+
+
+<div>
+    <button mat-raised-button (click)="save()">Unesi</button>
+</div>

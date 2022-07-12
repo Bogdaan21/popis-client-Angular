@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Artikal } from '../interface/artikal-interface';
 import { environment } from 'src/environments/environment';
-import { ApiResponse } from '../interface/api-response-iterface';
+import { ApiResponse } from '../interface/api-response-interface';
 
 @Injectable({
   providedIn: 'root'

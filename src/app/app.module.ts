@@ -24,6 +24,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { ArtikalComponent } from './components/artikal/artikal.component';
 import { ArtikalpostputComponent } from './components/artikalpostput/artikalpostput.component';
 import { ImenikComponent } from './components/imenik/imenik.component';
+import { ImenikpostpustComponent } from './components/imenikpostpust/imenikpostpust.component';
+import { HomepostputComponent } from './components/homepostput/homepostput.component';
 
 
 @NgModule({
@@ -35,6 +37,8 @@ import { ImenikComponent } from './components/imenik/imenik.component';
     ArtikalComponent,
     ArtikalpostputComponent,
     ImenikComponent,
+    ImenikpostpustComponent,
+    HomepostputComponent,
   ],
   imports: [
     BrowserModule,

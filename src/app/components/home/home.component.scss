@@ -1,9 +1,11 @@
 @import './../../../assets/scss/color';
 
-.example-card {
-    max-width: 400px;
-  }
-  
   .example-header-image {
     background-size: cover;
+  }
+
+  .example-card {
+    max-width: 400px;
+    display: inline-block;
+    margin: 2%;
   }

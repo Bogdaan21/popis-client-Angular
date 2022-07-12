@@ -1,15 +1,17 @@
-<mat-card class="example-card">
-   <mat-card-header>
-     <div mat-card-avatar class="example-header-image"></div>
-     <mat-card-title>Shiba Inu</mat-card-title>
-     <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-   </mat-card-header>
-   <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-   <mat-card-content>
-     <p>
-       The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-       A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-       bred for hunting.
-     </p>
-   </mat-card-content>
- </mat-card>
+<h1>Lista Direktorata</h1>
+<mat-card *ngFor="let d of direktorat" class="example-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>{{d.naziv_direktorata}}</mat-card-title>
+  </mat-card-header>
+  <img mat-card-image src="http://localhost:7000/{{d.slika_direktorata}}" alt="Slika Direktorata">
+  <mat-card-content>
+    <p>
+        {{d.opis_direktorata}}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button routerLink="/uredidirektorat/{{d.direktoratid}}" >EDIT</button>
+    <button mat-button routerLink="deleteDirektorat(d.direktoratid)">DELETE</button>
+  </mat-card-actions>
+</mat-card>
