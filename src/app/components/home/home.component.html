@@ -11,7 +11,7 @@
     </p>
   </mat-card-content>
   <mat-card-actions>
-    <button mat-button routerLink="/uredidirektorat/{{d.direktoratid}}" >EDIT</button>
-    <button mat-button routerLink="deleteDirektorat(d.direktoratid)">DELETE</button>
+    <button mat-button routerLink="/uredidirektorat/{{d.direktoratid}}">EDIT</button>
+    <button mat-button (click)="deleteDiraktorat(d.direktoratid)">DELETE</button>
   </mat-card-actions>
 </mat-card>

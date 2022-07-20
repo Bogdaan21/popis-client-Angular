@@ -6,9 +6,7 @@
         <mat-label>Tip</mat-label>
         <input #tip matInput type="text" [(ngModel)] = "artikalpostput.tip"/>
     </mat-form-field>
-</div>
 
-<div>
     <mat-form-field appearance='fill'>
         <mat-label>Model</mat-label>
         <input #model matInput type="text" [(ngModel)] = "artikalpostput.model"/>
@@ -25,35 +23,46 @@
 <div>
     <mat-form-field appearance='fill'>
         <mat-label>Inventarski Broj</mat-label>
-        <input #inventarski_broj_novi matInput type="number" [(ngModel)] = "artikalpostput.inventarski_broj_novi"/>
+        <input #inventarski_broj_novi matInput type="text" [(ngModel)] = "artikalpostput.inventarski_broj_novi"/>
     </mat-form-field>
 </div>
+
+<mat-form-field appearance="fill">
+    <mat-label>Status</mat-label>
+    <mat-select [(ngModel)] = "status.viewValue">
+      <mat-option *ngFor="let status of status" [value]="status.viewValue">
+        {{status.viewValue}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
 
 <div>
     <mat-form-field appearance='fill'>
         <mat-label>Nabavna cijena</mat-label>
-        <input #nabavna_cijena matInput type="number" [(ngModel)] = "artikalpostput.nabavna_cijena"/>
+        <input #nabavna_cijena matInput type="text" [(ngModel)] = "artikalpostput.nabavna_cijena"/>
     </mat-form-field>
 </div>
 
 <div>
     <mat-form-field appearance='fill'>
         <mat-label>Godina nabavke</mat-label>
-        <input #godina_nabavke matInput type="number" [(ngModel)] = "artikalpostput.godina_nabavke"/>
+        <input #godina_nabavke matInput type="text" [(ngModel)] = "artikalpostput.godina_nabavke"/>
     </mat-form-field>
 </div>
 
-<div>
-    <mat-form-field appearance='fill'>
-        <mat-label>Sprat</mat-label>
-        <input #sprat matInput type="number" [(ngModel)] = "artikalpostput.sprat"/>
-    </mat-form-field>
-</div>
+<mat-form-field appearance="fill">
+    <mat-label>Sprat</mat-label>
+    <mat-select>
+      <mat-option *ngFor="let sprat of sprat" [value]="sprat.viewValue">
+        {{sprat.viewValue}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
 
 <div>
     <mat-form-field appearance='fill'>
         <mat-label>Broj Kancelarije</mat-label>
-        <input #broj_kancelarije matInput type="number" [(ngModel)] = "artikalpostput.broj_kancelarije"/>
+        <input #broj_kancelarije matInput type="text" [(ngModel)] = "artikalpostput.broj_kancelarije"/>
     </mat-form-field>
 </div>
 

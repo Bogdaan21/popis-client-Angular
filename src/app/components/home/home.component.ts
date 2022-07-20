@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
     this.fillData();
   }
 
-  deleteDiraktorat(direktoratid: number) {
+  deleteDiraktorat(direktoratid: number): void {
     this.direktoratService.deleteDirektorat(direktoratid).subscribe(data => {
       if(data.affectedRows == 1) {
         alert('Direktorat izbrisan');

@@ -19,5 +19,7 @@ export interface Artikal {
     knjigovodstvena_evidencija_id: number;
     mjesto_id: number;
     vrsta_id: number;
+    status_id: number;
+
 
 }

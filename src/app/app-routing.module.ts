@@ -15,7 +15,7 @@ const routes: Routes = [
   { path: 'unesiartikal', component: ArtikalpostputComponent },
   { path: 'urediartikal/:aid', component: ArtikalpostputComponent },
   { path: 'imenik', component: ImenikComponent },
-  // { path: 'unesikontakta', component: ImenikpostpustComponent}, // sa namjerom iskljuceno. Iskljuceno i u headeru-u.
+  { path: 'unesikontakta', component: ImenikpostpustComponent}, // sa namjerom iskljuceno. Iskljuceno i u headeru-u.
   { path: 'urediimenik/:imenikid', component: ImenikpostpustComponent },
 ];
 

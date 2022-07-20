@@ -18,6 +18,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSortModule } from '@angular/material/sort';
 import { MatCardModule } from '@angular/material/card';
+import { MatSelectModule } from '@angular/material/select';
 
 import { HttpClientModule } from '@angular/common/http';
 
@@ -54,6 +55,7 @@ import { HomepostputComponent } from './components/homepostput/homepostput.compo
     MatIconModule,
     MatSortModule,
     MatCardModule,
+    MatSelectModule,
     
   ],
   providers: [],
