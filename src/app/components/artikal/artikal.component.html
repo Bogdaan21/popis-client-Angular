@@ -45,34 +45,19 @@
             <td mat-cell *matCellDef="let element"> {{element.godina_nabavke}} </td>
           </ng-container>
 
-          <ng-container matColumnDef="otpisano">
-            <th mat-header-cell *matHeaderCellDef> otpisano</th>
-            <td mat-cell *matCellDef="let element"> {{element.otpisano}} </td>
-          </ng-container>
-
-          <ng-container matColumnDef="nepopisano">
-            <th mat-header-cell *matHeaderCellDef> nepopisano</th>
-            <td mat-cell *matCellDef="let element"> {{element.nepopisano}} </td>
-          </ng-container>
-
-          <ng-container matColumnDef="popisano">
-            <th mat-header-cell *matHeaderCellDef> popisano</th>
-            <td mat-cell *matCellDef="let element"> {{element.popisano}} </td>
-          </ng-container>
-
-          <ng-container matColumnDef="napomena">
-            <th mat-header-cell *matHeaderCellDef> napomena</th>
-            <td mat-cell *matCellDef="let element"> {{element.napomena}} </td>
-          </ng-container>
-
           <ng-container matColumnDef="Zaduzenje">
             <th mat-header-cell *matHeaderCellDef> Zadužen/a </th>
             <td mat-cell *matCellDef="let element"> {{element.zaduzenje}} </td>
           </ng-container>
 
-          <ng-container matColumnDef="status_id">
+          <ng-container matColumnDef="napomena">
+            <th mat-header-cell *matHeaderCellDef> Napomena</th>
+            <td mat-cell *matCellDef="let element"> {{element.napomena}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="naziv">
             <th mat-header-cell *matHeaderCellDef> Status </th>
-            <td mat-cell *matCellDef="let element"> {{element.status_id}} </td>
+            <td mat-cell *matCellDef="let element"> {{element.naziv}} </td>
           </ng-container>
          
           <!-- TASTERI KOMANDE -->

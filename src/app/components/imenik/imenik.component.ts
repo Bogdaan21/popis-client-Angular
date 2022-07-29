@@ -1,7 +1,4 @@
-import { LiveAnnouncer } from '@angular/cdk/a11y';
-import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
-import { MatSort } from '@angular/material/sort';
-import { MatTableDataSource } from '@angular/material/table';
+import { Component, OnInit } from '@angular/core';
 import { Imenik } from 'src/app/interface/imenik-interface';
 import { ImenikService } from 'src/app/services/imenik.service';
 
@@ -13,20 +10,17 @@ import { ImenikService } from 'src/app/services/imenik.service';
 
 export class ImenikComponent implements OnInit {
 
+  searchText: any;
+
   displayedColumns: string[] = ['broj_lokala', 'ime_prezime', 'broj_kancelarije', 'organizaciona_jedinica', 'uredi', 'izbrisi'];
   imenik: Imenik[] = [];
-  dataSource = new MatTableDataSource(this.imenik);
 
   constructor(private imenikService: ImenikService) {}
-
-  @ViewChild(MatSort) sort: MatSort;
-
 
   ngOnInit(): void {
     this.imenikService.getAllImenik().subscribe(data => {
       this.imenik = data;
     })
-    this.dataSource.sort = this.sort;
   }
 
 

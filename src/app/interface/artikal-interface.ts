@@ -12,14 +12,12 @@ export interface Artikal {
     napomena: string;
     tip: string;
     konto: string;
-    popisano: string;
-    otpisano: string;
-    nepopisano: string;
-    cijena_id: number;
-    knjigovodstvena_evidencija_id: number;
-    mjesto_id: number;
-    vrsta_id: number;
-    status_id: number;
+    // cijena_id: number;
+    // knjigovodstvena_evidencija_id: number;
+    // mjesto_id: number;
+    // vrsta_id: number;
+    naziv: string;
+    // satuts_id: string;
 
 
 }

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Artikal } from 'src/app/interface/artikal-interface';
 import { Direktorat } from 'src/app/interface/direktorat-interface';
+import { ArtikalService } from 'src/app/services/artikal.service';
 import { PocetnastranaService } from 'src/app/services/pocetnastrana.service';
 
 @Component({
@@ -10,11 +12,13 @@ import { PocetnastranaService } from 'src/app/services/pocetnastrana.service';
 export class HomeComponent implements OnInit {
 
   direktorat: Direktorat[] = [];
+  artikal: Artikal[] = [];
 
   constructor(private direktoratService: PocetnastranaService) { }
 
   ngOnInit(): void{
     this.fillData();
+
   }
 
   deleteDiraktorat(direktoratid: number): void {
@@ -31,4 +35,5 @@ export class HomeComponent implements OnInit {
       this.direktorat = data;
   })
 }
+
 }

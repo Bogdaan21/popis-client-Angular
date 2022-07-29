@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Artikal } from 'src/app/interface/artikal-interface';
-import { Status_id } from 'src/app/interface/status_id-interface';
 import { ArtikalService } from 'src/app/services/artikal.service';
 
 @Component({
@@ -11,11 +10,11 @@ import { ArtikalService } from 'src/app/services/artikal.service';
 
 export class ArtikalComponent implements OnInit {
 
-  displayedColumns: string[] = [ 'tip', 'Model', 'Inventarski_broj_novi', 'konto', 'sprat', 'broj_kancelarije', 'nabavna_cijena', 'sadasnja_vrijednost', 'godina_nabavke', 'popisano', 'otpisano' , 'nepopisano' , 'napomena', 'Zaduzenje', 'Uredi', 'Izbrisi', 'status_id'];
+  displayedColumns: string[] = [ 'tip', 'Model', 'Inventarski_broj_novi', 'konto', 'sprat', 'broj_kancelarije', 'nabavna_cijena', 'sadasnja_vrijednost', 'godina_nabavke' ,'napomena', 'Zaduzenje', 'Uredi', 'Izbrisi', 'naziv'];
   // inventarski_broj_stari uklonjen. Dodati ga u displayedColumns i u html-u koji sam zakometarisao. U interface ostao.
   // status_id nije povezan ni sa cim trenutno jer ne znam da li u ovoj komponenti smiju da se povezuju samo atribudi koji su za nju, i strani kljucevi a status je strani kljuc od knjigovodst. takodje izbrisan iz liste displaycolums
   artikal: Artikal[] = [];
-  // status_id: Status_id[] = {sid: null, popisano: null, otpisano: null, nepopisano: null};
+  // status_id: Status_id[] = {sid: null, popisano: null, otpisano: null, nepopisano: null}; pokusaj da se status prikaze u (select)
 
   constructor(private artikalService: ArtikalService) { }
 

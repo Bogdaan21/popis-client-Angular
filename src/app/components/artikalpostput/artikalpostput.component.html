@@ -1,10 +1,11 @@
+<br>
 <h1 *ngIf="!edit">Unesi novi Artikal</h1>
 <h1 *ngIf="edit">Uredi Artikal</h1>
 
 <div>
     <mat-form-field appearance='fill'>
         <mat-label>Tip</mat-label>
-        <input #tip matInput type="text" [(ngModel)] = "artikalpostput.tip"/>
+        <input class="test" #tip matInput type="text" [(ngModel)] = "artikalpostput.tip"/>
     </mat-form-field>
 
     <mat-form-field appearance='fill'>
@@ -14,6 +15,27 @@
 </div>
 
 <div>
+    <mat-form-field appearance='fill'>
+        <mat-label>Broj Kancelarije</mat-label>
+        <input #broj_kancelarije matInput type="text" [(ngModel)] = "artikalpostput.broj_kancelarije"/>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Sprat</mat-label>
+        <mat-select>
+          <mat-option *ngFor="let a of artikal" [value]="a.sprat">
+            {{a.sprat}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+</div>
+
+<div>
+    <mat-form-field appearance='fill'>
+        <mat-label>Nabavna cijena</mat-label>
+        <input #nabavna_cijena matInput type="text" [(ngModel)] = "artikalpostput.nabavna_cijena"/>
+    </mat-form-field>
+
     <mat-form-field appearance='fill'>
         <mat-label>Konto</mat-label>
         <input #konto matInput type="text" [(ngModel)] = "artikalpostput.konto"/>
@@ -25,51 +47,26 @@
         <mat-label>Inventarski Broj</mat-label>
         <input #inventarski_broj_novi matInput type="text" [(ngModel)] = "artikalpostput.inventarski_broj_novi"/>
     </mat-form-field>
-</div>
 
-<mat-form-field appearance="fill">
-    <mat-label>Status</mat-label>
-    <mat-select [(ngModel)] = "status.viewValue">
-      <mat-option *ngFor="let status of status" [value]="status.viewValue">
-        {{status.viewValue}}
-      </mat-option>
-    </mat-select>
-  </mat-form-field>
-
-<div>
-    <mat-form-field appearance='fill'>
-        <mat-label>Nabavna cijena</mat-label>
-        <input #nabavna_cijena matInput type="text" [(ngModel)] = "artikalpostput.nabavna_cijena"/>
-    </mat-form-field>
-</div>
-
-<div>
-    <mat-form-field appearance='fill'>
-        <mat-label>Godina nabavke</mat-label>
-        <input #godina_nabavke matInput type="text" [(ngModel)] = "artikalpostput.godina_nabavke"/>
-    </mat-form-field>
-</div>
-
-<mat-form-field appearance="fill">
-    <mat-label>Sprat</mat-label>
-    <mat-select>
-      <mat-option *ngFor="let sprat of sprat" [value]="sprat.viewValue">
-        {{sprat.viewValue}}
-      </mat-option>
-    </mat-select>
-  </mat-form-field>
-
-<div>
-    <mat-form-field appearance='fill'>
-        <mat-label>Broj Kancelarije</mat-label>
-        <input #broj_kancelarije matInput type="text" [(ngModel)] = "artikalpostput.broj_kancelarije"/>
-    </mat-form-field>
-</div>
-
-<div>
     <mat-form-field appearance='fill'>
         <mat-label>Zadužen/a</mat-label>
         <input #zaduzenje matInput type="text" [(ngModel)] = "artikalpostput.zaduzenje"/>
+    </mat-form-field>
+</div>
+
+<div>
+    <mat-form-field appearance="fill">
+        <mat-label>Status</mat-label>
+        <mat-select>
+          <mat-option *ngFor="let s of artikal" [value]="s.naziv">
+            {{s.naziv}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+    <mat-form-field appearance='fill'>
+        <mat-label>Godina nabavke</mat-label>
+        <input #godina_nabavke matInput type="text" [(ngModel)] = "artikalpostput.godina_nabavke"/>
     </mat-form-field>
 </div>
 
