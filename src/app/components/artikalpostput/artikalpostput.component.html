@@ -3,10 +3,14 @@
 <h1 *ngIf="edit">Uredi Artikal</h1>
 
 <div>
-    <mat-form-field appearance='fill'>
+    <mat-form-field appearance="fill">
         <mat-label>Tip</mat-label>
-        <input class="test" #tip matInput type="text" [(ngModel)] = "artikalpostput.tip"/>
-    </mat-form-field>
+        <mat-select  [(ngModel)] = "artikalpostput.tip">
+          <mat-option *ngFor="let v of vrsta" [value]="v.tip">
+            {{v.tip}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
 
     <mat-form-field appearance='fill'>
         <mat-label>Model</mat-label>
@@ -22,9 +26,9 @@
 
     <mat-form-field appearance="fill">
         <mat-label>Sprat</mat-label>
-        <mat-select>
-          <mat-option *ngFor="let a of artikal" [value]="a.sprat">
-            {{a.sprat}}
+        <mat-select  [(ngModel)] = "artikalpostput.sprat">
+          <mat-option *ngFor="let m of mjesto" [value]="m.sprat">
+            {{m.sprat}}
           </mat-option>
         </mat-select>
       </mat-form-field>
@@ -57,8 +61,8 @@
 <div>
     <mat-form-field appearance="fill">
         <mat-label>Status</mat-label>
-        <mat-select>
-          <mat-option *ngFor="let s of artikal" [value]="s.naziv">
+        <mat-select  [(ngModel)] = "artikalpostput.naziv">
+          <mat-option *ngFor="let s of status" [value]="s.naziv">
             {{s.naziv}}
           </mat-option>
         </mat-select>
@@ -67,6 +71,13 @@
     <mat-form-field appearance='fill'>
         <mat-label>Godina nabavke</mat-label>
         <input #godina_nabavke matInput type="text" [(ngModel)] = "artikalpostput.godina_nabavke"/>
+    </mat-form-field>
+</div>
+
+<div>
+    <mat-form-field appearance='fill'>
+        <mat-label>Napomena</mat-label>
+        <input #napomena matInput type="text" [(ngModel)] = "artikalpostput.napomena"/>
     </mat-form-field>
 </div>
 

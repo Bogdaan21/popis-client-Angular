@@ -10,12 +10,12 @@ import { HomepostputComponent } from './components/homepostput/homepostput.compo
 const routes: Routes = [
   { path: 'direktorat', component: HomeComponent }, // path:'home' (dodatak u url /home), HomeComponent (sta otvara kad udjes na URL)
   { path: 'uredidirektorat/:direktoratid', component: HomepostputComponent},
-  { path: 'unesidirektorat', component: HomepostputComponent}, // sa namjerom iskljuceno. Iskljuceno i u headeru-u.
+  { path: 'unesidirektorat', component: HomepostputComponent},
   { path: 'artikal', component: ArtikalComponent },
   { path: 'unesiartikal', component: ArtikalpostputComponent },
   { path: 'urediartikal/:aid', component: ArtikalpostputComponent },
   { path: 'imenik', component: ImenikComponent },
-  { path: 'unesikontakta', component: ImenikpostpustComponent}, // sa namjerom iskljuceno. Iskljuceno i u headeru-u.
+  { path: 'unesikontakta', component: ImenikpostpustComponent},
   { path: 'urediimenik/:imenikid', component: ImenikpostpustComponent },
 ];
 

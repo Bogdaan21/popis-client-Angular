@@ -4,7 +4,7 @@
       <input class="from-control" type="text" name="search" [(ngModel)] = "searchText" autocomplete="off" placeholder="&#xF002; Pretraga..">
     </div>
 
-    <table mat-table [dataSource]="imenik | filter:searchText " matSort class="mat-elevation-z8">
+    <table mat-table [dataSource]="imenik | filter:searchText">
 
   <ng-container matColumnDef="broj_lokala">
     <th mat-header-cell *matHeaderCellDef>Broj lokala </th>

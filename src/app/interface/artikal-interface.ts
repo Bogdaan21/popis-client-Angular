@@ -17,7 +17,7 @@ export interface Artikal {
     // mjesto_id: number;
     // vrsta_id: number;
     naziv: string;
-    // satuts_id: string;
+    // status_id: string;
 
 
 }

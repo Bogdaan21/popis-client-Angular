@@ -1,4 +1,10 @@
-    <table mat-table [dataSource]="artikal" class="mat-elevation-z8">
+<div class="kontejner">
+  <div class="row">
+    <div class="kutija">
+      <input class="from-control" type="text" name="search" [(ngModel)] = "searchText" autocomplete="off" placeholder="&#xF002; Pretraga..">
+    </div>
+    
+    <table mat-table [dataSource]="artikal | filter:searchText" class="mat-elevation-z8">
 
           <ng-container matColumnDef="tip">
             <th mat-header-cell *matHeaderCellDef> Tip </th>
@@ -66,7 +72,7 @@
             <th mat-header-cell *matHeaderCellDef> Uredi </th> 
             <td mat-cell *matCellDef="let element"> 
               <button mat-icon-button color="black" aria-label="Uredi" routerLink="/urediartikal/{{element.aid}}">
-                <mat-icon>edit</mat-icon>
+                <mat-icon>edit{{element.aid}}</mat-icon>
               </button>
                </td> 
           </ng-container>
